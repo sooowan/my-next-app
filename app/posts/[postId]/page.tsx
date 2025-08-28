@@ -18,7 +18,7 @@ async function PostItemPage({ params }: PageProps) {
 	}
 	return (
 		<div className="box page">
-			<p>Intercpted PostItem Page {postId}</p>
+			<p>PostItem Page {postId}</p>
 			<PostFragment data={post} />
 		</div>
 	);
