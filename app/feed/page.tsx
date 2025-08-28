@@ -2,19 +2,19 @@
 
 // "use client";
 
-import { Suspense } from "react";
-import PostList from "@/components/PostList";
+// import { Suspense } from "react";
+// import PostList from "@/components/PostList";
 // import { useState, useEffect } from "react";
-// import PostList2 from "@/components/PostList2";
-import {
-	// readPostAction,
-	readPostActionWithCache,
-	resetCache,
-} from "@/lib/actions/posts";
+import PostList2 from "@/components/PostList2";
+// import {
+// 	// readPostAction,
+// 	readPostActionWithCache,
+// 	resetCache,
+// } from "@/lib/actions/posts";
 
 export default function FeedPage() {
 	// const postPromise = readPostAction();
-	const posts = readPostActionWithCache();
+	// const posts = readPostActionWithCache();
 	// const [posts, setPosts] = useState<Promise<MyNextApp.Post[]>>(
 	// 	Promise.resolve([])
 	// 	// new Promise((resolve) => {
@@ -31,22 +31,22 @@ export default function FeedPage() {
 
 	return (
 		<div className="box page">
-			<button
+			{/* <button
 				type="button"
 				className="rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white opacity-100 focus:outline-none hover:bg-fuchsia-500 mb-2"
 				onClick={resetCache}
 			>
 				reset cache
-			</button>
+			</button> */}
 			<div>
 				{/* <Suspense fallback={<div>Loading...</div>}>
 						<PostList postPromise={postPromise} />
 					</Suspense> */}
-				<Suspense fallback={<div>Loading...</div>}>
+				{/* <Suspense fallback={<div>Loading...</div>}>
 					<PostList postPromise={posts} />
-				</Suspense>
+				</Suspense> */}
 
-				{/* <PostList2 /> */}
+				<PostList2 />
 			</div>
 		</div>
 	);
